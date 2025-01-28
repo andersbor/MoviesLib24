@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoviesLib24
 {
-    public class MoviesRepositoryList
+    public class MoviesRepositoryList : IMoviesRepository
     {
         private int _nextId = 1;
         private readonly List<Movie> _movies = new();
@@ -15,11 +15,6 @@ namespace MoviesLib24
         {
             //_movies.Add(new Movie() { Id = _nextId++, Title = "The Matrix", Year = 1999 });
             //_movies.Add(new Movie() { Id = _nextId++, Title = "Snehvide", Year = 1937 });
-        }
-
-        public List<Movie> GetAll()
-        {
-            return new List<Movie>(_movies);
         }
 
         public Movie? GetById(int id)

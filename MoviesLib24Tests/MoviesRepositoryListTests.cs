@@ -11,7 +11,7 @@ namespace MoviesLib24.Tests
     [TestClass()]
     public class MoviesRepositoryListTests
     {
-        private MoviesRepositoryList _repo;
+        private IMoviesRepository _repo;
 
         [TestInitialize]
         public void Setup()
@@ -19,7 +19,7 @@ namespace MoviesLib24.Tests
             _repo = new MoviesRepositoryList();
             _repo.Add(new Movie() { Title = "The Matrix", Year = 1999 });
             _repo.Add(new Movie() { Title = "Snehvide", Year = 1937 });
-            _repo.Add(new Movie() { Title = "Løvejagten", Year = 2008 });
+            _repo.Add(new Movie() { Title = "Løvejagten", Year = 1907 });
             _repo.Add(new Movie() { Title = "Abekongen", Year = 1997 });
         }
 
