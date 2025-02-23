@@ -56,14 +56,14 @@ namespace MoviesLib24Tests
         {
             IEnumerable<Movie> movies = _repo.Get(orderBy: "Title");
 
-            Assert.AreEqual(movies.First().Title, "Snehvide");
+            Assert.AreEqual("Snehvide", movies.First().Title);
 
             movies = _repo.Get(orderBy: "Year");
             Assert.AreEqual(movies.First().Title, "Z");
 
             movies = _repo.Get(titleIncludes: "vide");
             Assert.AreEqual(1, movies.Count());
-            Assert.AreEqual(movies.First().Title, "Snehvide");
+            Assert.AreEqual("Snehvide", movies.First().Title);
         }
 
         [TestMethod]
